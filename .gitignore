@@ -1,0 +1,31 @@
+.DS_Store
+.idea
+*.[56789ao]
+*.a[56789o]
+*.so
+*.pyc
+._*
+.nfs.*
+[56789a].out
+*~
+*.orig
+*.rej
+*.exe
+.*.swp
+core
+*.cgo*.go
+*.cgo*.c
+_cgo_*
+_obj
+_test
+_testmain.go
+
+.vscode
+dist
+
+# python
+__pycache__
+
+# vue
+node_modules
+npm-debug.log
