@@ -19,13 +19,15 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework_swagger.views import get_swagger_view
 from rest_framework import routers
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('swagger/', get_swagger_view()),
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 router = routers.DefaultRouter()
 url_view_set = {}
